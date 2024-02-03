@@ -8,7 +8,7 @@ plugins {
     id 'java'
 }
 
-group = "com.crimsonwarpedcraft.exampleplugin"
+group = "xyz.necrozma.upnpplugin"
 
 static def getTime() {
     SimpleDateFormat sdf = new SimpleDateFormat("yyMMdd-HHmm")
@@ -53,6 +53,12 @@ repositories {
     }
 
     mavenCentral()
+
+    maven {
+        url 'http://4thline.org/m2'
+        name '4thline-repo'
+        allowInsecureProtocol = true
+    }
 }
 
 dependencies {
@@ -64,10 +70,7 @@ dependencies {
     testImplementation 'io.papermc.paper:paper-api:1.20.4-R0.1-SNAPSHOT'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.1'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.10.1'
-}
-
-test {
-    useJUnitPlatform()
+    implementation 'org.fourthline.cling:cling-core:2.1.2'
 }
 
 processResources {

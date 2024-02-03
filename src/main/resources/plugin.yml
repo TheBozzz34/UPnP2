@@ -1,4 +1,4 @@
-main: ${PACKAGE}.${NAME}
+main: "xyz.necrozma.upnpplugin.UpnpPlugin"
 name: ${NAME}
 version: "${VERSION}"
 api-version: "1.16"
